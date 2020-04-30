@@ -24,18 +24,52 @@
       margin: 0;
     }
 
-    .container {
-      position: absolute;
-      background: url("Images/imagebackground.jpg") no-repeat center center fixed;
+    #div1 {
+
+      background: url("Images/imagebackground.jpg");
       background-size: cover;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
+      height: 100vh;
+      width: 100%;
       max-width: 100%;
-      max-height: 100vh;
-      margin: auto;
-      
+      display: table;
+      background-attachment: fixed;
+
     }
+
+    #div2 {
+
+      background: url("Images/imagebackground2.jpeg");
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+      max-width: 100%;
+      display: table;
+      background-attachment: fixed;
+
+    }
+
+    #div3 {
+
+      background: url("Images/imagebackground3.jpeg");
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+      max-width: 100%;
+      display: table;
+      background-attachment: fixed;
+
+    }
+    #div4 {
+
+background: url("Images/imagebackground4.png");
+background-size: cover;
+height: 100vh;
+width: 100%;
+max-width: 100%;
+display: table;
+background-attachment: fixed;
+
+}
 
     .spinner {
       text-align: center;
@@ -979,11 +1013,118 @@
         margin-top: 60px;
       }
     }
+
+
+
+
+
+    a:hover {
+      color: white;
+      background: #004ffc;
+      border-bottom: 0.35em solid white;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    #timeline-content {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    /* Timeline */
+    .timeline {
+      border-left: 4px solid #004ffc;
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 4px;
+      background: rgba(255, 255, 255, 0.03);
+      color: white;
+      font-family: sans-serif;
+      margin: 10px auto;
+      letter-spacing: 0.5px;
+      position: relative;
+      line-height: 1.4em;
+      font-size: 1.03em;
+      padding: 10px;
+      list-style: none;
+      text-align: left;
+      font-weight: 100;
+      max-width: 30%;
+    }
+
+    .timeline h1 {
+      font-family: sans-serif;
+      letter-spacing: 1.5px;
+      font-weight: 100;
+      font-size: 1.4em;
+    }
+
+    .timeline h2,
+    .timeline h3 {
+      font-family: sans-serif;
+      letter-spacing: 1.5px;
+      font-weight: 400;
+      font-size: 1.4em;
+    }
+
+    .timeline .event {
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+      padding-bottom: 25px;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .timeline .event:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border: none;
+    }
+
+    .timeline .event:before,
+    .timeline .event:after {
+      position: absolute;
+      display: block;
+      top: 0;
+    }
+
+    .timeline .event:before {
+      left: -217.5px;
+      color: white;
+      content: attr(data-date);
+      text-align: right;
+      font-weight: 100;
+      font-size: 0.9em;
+      min-width: 120px;
+      font-family: sans-serif;
+    }
+
+    .timeline .event:after {
+      box-shadow: 0 0 0 4px #004ffc;
+      left: -57.85px;
+      background: #313534;
+      border-radius: 50%;
+      height: 11px;
+      width: 11px;
+      content: "";
+      top: 5px;
+    }
+
+    hr {
+      border: 3px solid black;
+      border-radius: 5px;
+      margin-left: 50%;
+    }
+    .skill p{
+      color: blue;
+      font-size: large;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
   </style>
   <script>
     $(document).ready(function () {
       //Preloader
-      preloaderFadeOutTime = 3000;
+      preloaderFadeOutTime = 5000;
       function hidePreloader() {
         var preloader = $('.spinner');
         preloader.fadeOut(preloaderFadeOutTime);
@@ -1000,7 +1141,7 @@
     <div class="bounce3"></div>
   </div>
 
-  <div class="container">
+  <div class="container" id="div1">
     <a class="logo" href="#">
       <img src="Images/logo.png" alt="Logo" style="width:40px;margin-top: 10px;float: left;">
     </a>
@@ -1010,7 +1151,7 @@
         <h6 style="margin-left: 25%;">01010110 01001001 01000111 01000101 01010011 01001000 </h6>
       </p>
     </div>
-  </br>
+    </br>
     </br>
     <div class="light">
       <span id="L">[ &nbsp;</span>
@@ -1024,8 +1165,8 @@
     </div>
     </br>
     </br>
-  </br>
-</br>
+    </br>
+    </br>
     <div>
       <a class="whoami">
         <img src="Images/whoami.png" height="100" width="125" alt="WhoAmI" style="float: left;">
@@ -1056,33 +1197,99 @@
       </p>
     </div>
     <div>
-    <ul style="text-align: center;">
-    </br></br>
-  </br>
+      <ul style="text-align: center;">
+        </br></br>
+        </br>
 
 
         <a href="https://github.com/ArunVigesh/" target="_blank">
-          <img alt="github" src="Images/GitHub.png"  height="40" width="40">
+          <img alt="github" src="Images/GitHub.png" height="40" width="40">
         </a>
         <a href="https://www.linkedin.com/in/arunvigesh" target="_blank" style="margin: 2%;">
           <img alt="linkedin" src="Images/LI.png" height="40" width="40">
         </a>
         <a href="mailto:arunvigesh1999@gmail.com" target="_blank">
-          <img alt="gmail" src="Images/gmail.png"  height="40" width="40" >
+          <img alt="gmail" src="Images/gmail.png" height="40" width="40">
         </a>
         <a href="https://www.facebook.com/arun.vigesh" target="_blank" style="margin: 2%;">
           <img alt="facebook" src="Images/facebook.png" height="40" width="40">
         </a>
         <a href="https://www.instagram.com/arun_vigesh/" target="_blank">
-          <img alt="instagram" src="Images/instagram.png" height="40" width="40" >
+          <img alt="instagram" src="Images/instagram.png" height="40" width="40">
         </a>
-    </ul>
-  </br>
-</br>
-</br>
+      </ul>
+      </br>
+      </br>
+      </br>
     </div>
   </div>
-
+  <div class="container" id="div2">
+    <h1 style="text-align: center; color: #eee;
+    margin: 10px;">Education</h1>
+    <div id="timeline-content">
+      <ul class="timeline">
+        <li class="event" data-date="2017 - 2021">
+          <h3>Amrita Vishwa Vidyapeetham</h3>
+          <p style="color: tomato;">B.Tech - CSE</p>
+          <p style="color: whitesmoke;">CGPA : 8.58 (upto 5th Sem)</p>
+        </li>
+        <li class="event" data-date="2015 - 2017">
+          <h3>Velammal Vidyashram</h3>
+          <p style="color: tomato;">Class 12</p>
+          <p style="color: whitesmoke;">Score 433/500</p>
+        </li>
+        <li class="event" id="date" data-date="2013 - 2015">
+          <h3>Alagar Public School</h3>
+          <p style="color: tomato;">Class 10</p>
+          <p style="color: whitesmoke;">CGPA 9.6/10</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container" id="div3">
+    <h1 style="text-align: center; color: black;
+    margin: 10px; font-family: sans-serif;">Skills</h1>
+    <div class="skill"style="margin-left: 25%; margin-right: 20%;">
+      <div>
+        <p style="color: darkblue;">Mobile Application Devlopment</p>
+        <p style="margin-left: 50%;">Java, XML</p>
+        <p>
+          <hr>
+        </p>
+      </div>
+      <div>
+        <p style="color: darkblue;">Web Application Devlopment</p>
+        <p style="margin-left: 50%; ">HTML, CSS, JS, PHP</p>
+        <p>
+          <hr>
+        </p>
+      </div>
+      <div>
+        <p style="color: darkblue;">Programming Languages</p>
+        <p style="margin-left: 50%; ">C, C++, Python, Java</p>
+        <p>
+          <hr>
+        </p>
+      </div>
+      <div>
+        <p style="color: darkblue;">Operating System </p>
+        <p style="margin-left: 50%; ">Windows, Linux</p>
+        <p>
+          <hr>
+        </p>
+      </div>
+      <div>
+        <p style="color: darkblue;">Others</p>
+        <p style="margin-left: 50%;">Matlab, Machine Learning, Deep Learning</p>
+        <p>
+          <hr>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="div4">
+<h1>text</h1>
+  </div>
 
 </body>
 
